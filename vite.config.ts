@@ -4,7 +4,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '${REPO_NAME}/',
+  base: 'https://atanookakura.github.io/pwa-test/',
   build: {
     outDir: 'docs',
   },
@@ -21,7 +21,7 @@ export default defineConfig({
         description: 'A simple PWA test application',
         theme_color: '#333333',
         display: 'standalone',
-        start_url: '${REPO_NAME}/',
+        start_url: 'https://atanookakura.github.io/pwa-test/',
         icons: [{
           src: 'src/assets/vue.svg',
           sizes: '192x192',
