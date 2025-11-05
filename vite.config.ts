@@ -4,6 +4,10 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '${REPO_NAME}/',
+  build: {
+    outDir: 'docs',
+  },
   plugins: [
     vue(),
     VitePWA({
@@ -16,6 +20,8 @@ export default defineConfig({
         short_name: 'test-pwa',
         description: 'A simple PWA test application',
         theme_color: '#333333',
+        display: 'standalone',
+        start_url: '${REPO_NAME}/',
         icons: [{
           src: 'src/assets/vue.svg',
           sizes: '192x192',
@@ -25,6 +31,15 @@ export default defineConfig({
           sizes: '512x512',
           type: 'image/svg+xml',
         },
+        {
+          src: 'logo192.png',
+          sizes: '192x192',
+          type: 'image/png',
+        }, {
+          src: 'logo512.png',
+          sizes: '512x512',
+          type: 'image/png',
+        }
         ],
       },
     })

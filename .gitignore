@@ -25,7 +25,6 @@ dist-ssr
 
 # ビルド成果物
 /dist
-/docs
 /dist-ssr
 *.local
 
